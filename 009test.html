@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid-area</title>
+
+    <style>
+      .container {
+        display: grid;
+        grid-template:
+          "header header header" 100px
+          "section section aside" 300px
+          "footer footer footer" 200px
+          / 1fr 200px 3fr;
+        gap: 10px;
+      }
+      /* https://heropy.blog/2019/08/17/css-grid/
+      17% 지점 응용 실습 */
+
+      .container header {
+        grid-area: header;
+        height: 100px;
+        /* z-index: 100px; */
+      }
+      /* .container header:hover {
+        height: 100px;
+      } */
+      .container section {
+        grid-area: section;
+      }
+      .container aside {
+        grid-area: aside;
+      }
+      .container footer {
+        grid-area: footer;
+      }
+      header {
+        background-color: seagreen;
+        grid-area: header;
+      }
+      section {
+        background-color: salmon;
+        grid-area: section;
+      }
+      aside {
+        background-color: slateblue;
+        grid-area: aside;
+      }
+      footer {
+        background-color: gold;
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>header</header>
+      <section>section</section>
+      <aside>aside</aside>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

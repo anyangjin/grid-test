@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      .grid-container {
+        display: grid;
+        /* grid-template-columns: repeat(2, 1fr 2fr); */
+        grid-template-columns: minmax(200px, 300px) minmax(300px, 400px);
+        grid-template-columns: repeat(3, minmax(200px, 300px));
+        grid-template-rows: 2fr 1fr;
+        overflow: hidden;
+        gap: 10px;
+      }
+
+      .grid-item {
+        background: skyblue;
+        border: 3px solid royalblue;
+      }
+      /* span.grid-item {
+        background: gold;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit cupiditate
+        dignissimos, sequi ab, soluta veritatis nesciunt architecto, perferendis
+        illum quas autem sit hic eveniet commodi velit? Fugiat iste fugit
+        voluptatem?
+      </div>
+      <div class="grid-item">b</div>
+      <div class="grid-item">c</div>
+      <div class="grid-item">d</div>
+      <div class="grid-item">e</div>
+      <div class="grid-item">f</div>
+    </div>
+
+    <!-- <span class="grid-container">
+      <span class="grid-item">a</span>
+      <span class="grid-item">b</span>
+      <span class="grid-item">c</span>
+      <span class="grid-item">d</span>
+      <span class="grid-item">e</span>
+      <span class="grid-item">f</span>
+    </span> -->
+  </body>
+</html>
